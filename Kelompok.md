@@ -1,5 +1,10 @@
-# Proyek 1 ASD
-Kelas : 
-1. Nama Mhs 1, NIM Mhs 1
-2. Nama Mhs 2, NIM Mhs 2
-2. Nama Mhs 3, NIM Mhs 3
+\# Proyek 1 ASD
+
+Kelas : ASD - TIF - D
+
+1\. Izzudin Ahmad Yasin, 255150207111038
+
+2\. Zoe Hans Abraham Ginting, 255150207111054
+
+3\. Aryan Zaky Prayogo, 255150207111059
+
