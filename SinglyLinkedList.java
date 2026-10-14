@@ -54,7 +54,7 @@ public class SinglyLinkedList implements LinkedList {
         C.pointer = baru;
     }
 
-    public void deleteFirst() {
+    public void deleteFirst(){
         if (isEmpty()) {
             System.err.println("Linked list kosong");
         } else if (size == 1) { // else if(head==tail)
@@ -67,8 +67,8 @@ public class SinglyLinkedList implements LinkedList {
         }
     }
 
-    public void deleteLast() {
-        if (isEmpty()) {
+    public void deleteLast(){
+        if (isEmpty()){
             System.err.println("Linked list kosong");
         } else if (size == 1) { // else if(head==tail)
             head = null;
@@ -76,7 +76,7 @@ public class SinglyLinkedList implements LinkedList {
             size--;
         } else {
             Node temp = head;
-            for (int i = 1; i < size; i++) {
+            for (int i = 1; i < size; i++){
                 temp = temp.pointer;
             }
             tail = temp;
@@ -85,8 +85,8 @@ public class SinglyLinkedList implements LinkedList {
         }
     }
 
-    public void deleteAfter(int index) {
-        if (isEmpty()) {
+    public void deleteAfter(int index){
+        if (isEmpty()){
             System.err.println("Linked list kosong");
         } else if (size == 1) { // else if(head==tail)
             head = null;
@@ -94,7 +94,7 @@ public class SinglyLinkedList implements LinkedList {
             size--;
         } else {
             Node temp = head;
-            for (int i = 0; i < index; i++) {
+            for (int i = 0; i < index; i++){
                 temp = temp.pointer;
             }
             temp.pointer = temp.pointer.pointer;
@@ -123,12 +123,12 @@ public class SinglyLinkedList implements LinkedList {
     }
 
     @Override
-    public int indexOf(Object targetData) {
+    public int indexOf(Object targetData){
         Node current = head;
         int index = 0;
-        while (current != null) {
+        while (current != null){
             if ((targetData == null && current.data == null) ||
-                (targetData != null && targetData.equals(current.data))) {
+                (targetData != null && targetData.equals(current.data))){
                 return index;
             }
             current = current.pointer;
@@ -138,12 +138,12 @@ public class SinglyLinkedList implements LinkedList {
     }
 
     @Override
-    public void printReverse() {
+    public void printReverse(){
         printReverseRecursive(head);
         System.out.println();
     }
 
-    private void printReverseRecursive(Node current) {
+    private void printReverseRecursive(Node current){
         if (current == null) {
             return;
         }
@@ -159,7 +159,7 @@ public class SinglyLinkedList implements LinkedList {
 
         // Jika targetData berada pada head
         if ((targetData == null && head.data == null) ||
-            (targetData != null && targetData.equals(head.data))) {
+            (targetData != null && targetData.equals(head.data))){
             deleteFirst();
             return true;
         }
@@ -186,7 +186,7 @@ public class SinglyLinkedList implements LinkedList {
     }
 
     @Override
-    public Object[] toArray() {
+    public Object[] toArray(){
         Object[] array = new Object[size];
         Node current = head;
         int i = 0;
