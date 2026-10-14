@@ -2,19 +2,19 @@ public class DoublyLinkedList implements LinkedList {
     private Node2P head, tail;
     int size = 0;
 
-     public DoublyLinkedList() {
+     public DoublyLinkedList(){
         head = tail = null;
     }
 
-    public boolean isEmpty() {
+    public boolean isEmpty(){
         return (size == 0);
     }
 
-    public int size() {
+    public int size(){
         return size;
     }
 
-    public void addFirst(Object inputData) {
+    public void addFirst(Object inputData){
         Node2P baru = new Node2P(inputData);
         if (isEmpty()) {
             head = baru;
@@ -28,7 +28,7 @@ public class DoublyLinkedList implements LinkedList {
         }
     }
 
-    public void addLast(Object inputData) {
+    public void addLast(Object inputData){
         Node2P baru = new Node2P(inputData);
         if (isEmpty()) {
             head = baru;
@@ -42,15 +42,15 @@ public class DoublyLinkedList implements LinkedList {
         }
     }
 
-    public void addAfter(int index, Object inputData) {
+    public void addAfter(int index, Object inputData){
         Node2P baru = new Node2P(inputData);
-        if (isEmpty()) {
+        if (isEmpty()){
             head = baru;
             tail = baru;
             size++;
         } else {
             Node2P temp = head;
-            for (int i = 0; i < index; i++) {
+            for (int i = 0; i < index; i++){
                 temp = temp.next;
             }
             baru.prev = temp;
@@ -61,9 +61,9 @@ public class DoublyLinkedList implements LinkedList {
         }
     }
 
-    public void deleteFirst() {
+    public void deleteFirst(){
         Node2P temp = head;
-        if (!isEmpty()) {
+        if (!isEmpty()){
             if (head == tail)
                 head = tail = null;
             else {
@@ -75,12 +75,12 @@ public class DoublyLinkedList implements LinkedList {
             System.out.println("List kosong!");
     }
 
-    public void deleteLast() {
+    public void deleteLast(){
         Node2P temp = tail;
-        if (!isEmpty()) {
-            if (tail == head) {
+        if (!isEmpty()){
+            if (tail == head){
                 head = tail = null;
-            } else {
+            } else{
                 tail.prev.next = null;
                 tail = temp.prev;
             }
@@ -151,17 +151,19 @@ public class DoublyLinkedList implements LinkedList {
     }
 
     @Override
-    public boolean remove(Object targetData) {
+    public boolean remove(Object targetData){
         Node2P current = head;
-        while (current != null) {
+        while (current != null){
             if ((targetData == null && current.data == null) ||
-                (targetData != null && targetData.equals(current.data))) {
+                (targetData != null && targetData.equals(current.data))){
 
-                if (current == head) {
+                if (current == head){
                     deleteFirst();
-                } else if (current == tail) {
+                }
+                else if (current == tail){
                     deleteLast();
-                } else {
+                }
+                else{
                     current.prev.next = current.next;
                     current.next.prev = current.prev;
                     size--;
@@ -174,11 +176,11 @@ public class DoublyLinkedList implements LinkedList {
     }
 
     @Override
-    public Object[] toArray() {
+    public Object[] toArray(){
         Object[] array = new Object[size];
         Node2P current = head;
         int i = 0;
-        while (current != null) {
+        while (current != null){
             array[i++] = current.data;
             current = current.next;
         }
