@@ -6,19 +6,19 @@ public class SinglyLinkedList implements LinkedList {
     public Node head, tail;
     private int size = 0;
 
-    public SinglyLinkedList() {
+    public SinglyLinkedList(){
         head = tail = null;
     }
 
-    public boolean isEmpty() {
+    public boolean isEmpty(){
         return (size == 0);
     }
 
-    public int size() {
+    public int size(){
         return size;
     }
 
-    public void addFirst(Object inputData) {
+    public void addFirst(Object inputData){
         Node baru = new Node(inputData);
         if (isEmpty()) {
             head = baru;
@@ -31,7 +31,7 @@ public class SinglyLinkedList implements LinkedList {
         }
     }
 
-    public void addLast(Object inputData) {
+    public void addLast(Object inputData){
         Node baru = new Node(inputData);
         if (isEmpty()) {
             head = baru;
