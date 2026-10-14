@@ -137,12 +137,14 @@ public class SinglyLinkedList implements LinkedList {
         return -1;
     }
 
+    
     @Override
     public void printReverse() {
         printReverseRecursive(head);
         System.out.println();
     }
 
+    
     private void printReverseRecursive(Node current) {
         if (current == null) {
             return;
@@ -185,7 +187,8 @@ public class SinglyLinkedList implements LinkedList {
         return false;
     }
 
-    @Override
+   
+     @Override
     public Object[] toArray() {
         Object[] array = new Object[size];
         Node current = head;

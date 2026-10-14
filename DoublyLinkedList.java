@@ -6,9 +6,11 @@ public class DoublyLinkedList implements LinkedList {
         head = tail = null;
     }
 
+    
     public boolean isEmpty() {
         return (size == 0);
     }
+
 
     public int size() {
         return size;
@@ -140,7 +142,8 @@ public class DoublyLinkedList implements LinkedList {
         return -1;
     }
 
-    @Override
+   
+     @Override
     public void printReverse() {
         Node2P current = tail;
         while (current != null) {
@@ -173,7 +176,8 @@ public class DoublyLinkedList implements LinkedList {
         return false;
     }
 
-    @Override
+   
+     @Override
     public Object[] toArray() {
         Object[] array = new Object[size];
         Node2P current = head;
