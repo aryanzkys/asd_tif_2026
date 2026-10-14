@@ -2,7 +2,6 @@ public class DoublyLinkedList implements LinkedList {
     private Node2P head, tail;
     int size = 0;
 
-
      public DoublyLinkedList() {
         head = tail = null;
     }
